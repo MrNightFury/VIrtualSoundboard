@@ -1,0 +1,47 @@
+{
+  "name": "virtualsoundboard",
+  "productName": "Virtual Soundboard",
+  "version": "1.0.0",
+  "description": "Virtual Soundboard application for playing sounds to virtual microphone channel.",
+  "main": "dist/main.js",
+  "scripts": {
+    "run": "yarn run build && electron .",
+    "build": "tsc && node dist/preloadRename.js",
+    "make": "electron-builder"
+  },
+  "author": "MrNightFury",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/jsonwebtoken": "^9.0.6",
+    "electron": "^31.1.0",
+    "electron-builder": "^24.13.3"
+  },
+  "type": "module",
+  "dependencies": {
+    "@electron/asar": "^3.2.10",
+    "ejs": "^3.1.10",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "build": {
+    "appId": "ru.mrnightfury.virtualsoundboard",
+    "directories": {
+      "output": "releases/${platform}"
+    },
+    "files": [
+      "!out/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "uninstallDisplayName": "Virtual Soundboard"
+    }
+  }
+}

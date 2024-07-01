@@ -1,0 +1,15 @@
+<div class="soundCard">
+    <div class="iconContainer">
+        <img class="soundIcon" src="./img/soundIcon.png" alt="Sound icon">
+        <div class="iconBlurer">
+            <img class="playButton" src="./img/play.webp" alt="Play" onclick="playSound('<%- item.path %>')">
+        </div>
+        
+    </div>
+        
+    <div class="soundTitle"><%- item.name %></div>
+    <input type="checkbox" id="test">
+    <label for="test">
+        <div class="soundDescription"><%- item.path %></div>
+    </label>
+</div>

@@ -1,0 +1,23 @@
+{
+    // Используйте IntelliSense, чтобы узнать о возможных атрибутах.
+    // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
+    // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "request": "launch",
+            "name": "Launch electron app",
+            "type": "node",
+            // "program": "${workspaceFolder}/dist/main.js",
+            "stopOnEntry": false,
+            "runtimeExecutable": "npm",
+            "args": [ "run", "run"],
+            "cwd": "${workspaceFolder}",
+
+            // "type": "node-terminal",
+            // "name": "Launch",
+            // "request": "launch",
+            // "command": "npm run run"
+        }
+    ]
+}
